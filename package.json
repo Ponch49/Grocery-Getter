@@ -1,0 +1,22 @@
+{
+  "title": "GroceryGetter",
+  "version": "1.0.0",
+  "author": "Francisco Lopez",
+
+  
+  "devDependencies": {
+    "eslint": "^8.49.0",
+    "express": "^4.18.2",
+    "i": "^0.3.7",
+    "npm": "^10.1.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "node": "^20.6.0",
+    "nodemon": "^3.0.1",
+    "react": "^18.2.0"
+  },
+  "scripts": {
+    "start": "nodemon server/server.js"
+  }
+}
