@@ -7,7 +7,7 @@ const app = express();
 
 
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
    return res.send('hello')
 })
 
