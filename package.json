@@ -39,6 +39,6 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack serve --hot --progress",
-    "devStart": "nodemon index.js" 
+    "devStart": "nodemon /server.js || exit 1" 
   }
 }
