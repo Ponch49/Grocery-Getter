@@ -2,6 +2,7 @@
   "title": "GroceryGetter",
   "version": "1.0.0",
   "author": "Francisco Lopez",
+  "main": "index.js",
   "devDependencies": {
     "@babel/core": "^7.22.20",
     "@babel/plugin-transform-react-inline-elements": "^7.22.5",
@@ -34,11 +35,18 @@
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",
-    "redux": "^4.2.1"
+    "redux": "^4.2.1",
+    "sass": "^1.68.0"
   },
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve --hot --progress",
-    "devStart": "nodemon /server.js || exit 1" 
+    "devStart": "webpack serve --open",
+    "start": "nodemon server/server.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "build",
+      "client"
+    ]
   }
 }
