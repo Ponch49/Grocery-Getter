@@ -1,10 +1,10 @@
 import React from "react";
-// import Item from '..Item.jsx'
+import Item from '../components/Item.jsx'
 
 const GroceryBag = (props) => {
     return (
         <div className="groceryBag">
-            <h2>Your Grocery Basket</h2>
+            <header className="header">Grocery Basket</header>
         </div>
     )
 }

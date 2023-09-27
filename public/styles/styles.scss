@@ -5,16 +5,18 @@ body {
    display: flex;
    justify-content: center;
    font-family: 'Indie Flower', cursive;
-   font-size: large;
+   font-size: x-large;
+   background-color: rgb(241, 133, 241);
     
    .header {
     display: flex;
+    font-family: 'Indie Flower', cursive;
     background-color: aquamarine;
     border-radius: 5px;
     border-style: solid;
     border-width: 2px;
     border-color: black;
-    box-shadow: 8px 7px 10px lightgrey;
+    box-shadow: 8px 7px 10px black;
     padding: 10px;
     margin: 15px;
     }
@@ -26,25 +28,53 @@ body {
         border-style: solid;
         border-color: black;
         border-radius: 5px;
+        box-shadow: 8px 7px 10px black;
         margin: 15px;
 
         .enter {
-            background-color: purple;
+            background-color: yellow;
             display: flex;
             justify-content: center;
             text-decoration-color: white;
+            border-style: solid;
+            border-radius: 2px;
+            font-size: large;
+        }
+
+        .button {
+            background-color: rgb(22, 252, 38);
+            font-family: 'Indie Flower', cursive;
+            font-size: large;
+            border-style: solid;
+            border-color: black;
+            border-radius: 2px;
+            
+        }
+
+        .itemName {
+            border-style: solid;
+            border-color: black;
+            border-radius: 10px;
+            font-family: 'Indie Flower', cursive;
         }
     }
 
-    .container {
+    .groceryBag {
         display: flex;
         justify-content: center;
+        background-color: white;
         border-style: solid;
-        
-        .groceryBag {
-           
-        }
+        border-color: black;
+        border-radius: 10px;
+        border-radius: 5px;
+        box-shadow: 8px 7px 10px black;
+        margin: 15px;
 
+        .header {
+            background-color: aquamarine;
+            font-size: x-large;
+        }
     }
+     
 
 }
