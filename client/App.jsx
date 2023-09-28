@@ -1,5 +1,6 @@
 import React from "react";
 import ItemContainer from './containers/ItemContainer.jsx'
+import { useSelector } from "react-redux";
 
 
 
@@ -9,6 +10,7 @@ import ItemContainer from './containers/ItemContainer.jsx'
 // };
 
 const App = (props) => {
+
    return( 
    <div>
         <div className="header">

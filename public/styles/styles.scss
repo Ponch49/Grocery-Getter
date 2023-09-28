@@ -10,6 +10,7 @@ body {
     
    .header {
     display: flex;
+    justify-content: center;
     font-family: 'Indie Flower', cursive;
     background-color: aquamarine;
     border-radius: 5px;
@@ -60,7 +61,7 @@ body {
     }
 
     .groceryBag {
-        display: flex;
+        display: grid;
         justify-content: center;
         background-color: white;
         border-style: solid;
@@ -69,11 +70,56 @@ body {
         border-radius: 5px;
         box-shadow: 8px 7px 10px black;
         margin: 15px;
+        max-width: 867px;
+        min-width: 1fr;
 
         .header {
+            display: grid;
+            justify-content: center;
             background-color: aquamarine;
-            font-size: x-large;
+            font-size: xx-large;
         }
+        
+        .cardContainer {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            
+
+                .itemCard {
+                display: grid;
+                background-color: bisque;
+                justify-content:space-evenly;
+                border-style: solid;
+                border-color: black;
+                border-radius: 10px;
+                border-radius: 5px;
+                box-shadow: 8px 7px 10px black;
+                margin: 15px;
+                padding: 10px;
+                
+
+                .button {
+                    background-color: rgb(22, 248, 252);
+                    font-family: 'Indie Flower', cursive;
+                    font-size: large;
+                    border-style: solid;
+                    border-color: black;
+                    border-radius: 2px;
+                    box-shadow: 4px 3px 4px black;
+                }
+
+                .button2 {
+                    background-color: red;
+                    font-family: 'Indie Flower', cursive;
+                    font-size: large;
+                    border-style: solid;
+                    border-color: black;
+                    border-radius: 2px;
+                    box-shadow: 4px 3px 4px black;
+                }
+            }
+        } 
     }
      
 

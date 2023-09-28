@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { produce } from "immer";
 
 const initialState = {
     item: '',
@@ -10,13 +11,37 @@ export const itemSlice = createSlice({
     initialState,
     reducers: {
         addItem: (state, action) => {
-            state.item = action.payload;
+            console.log(action)
+            const newItem = action.payload;
+            // console.log(newItem)
+            const newArr = state.currentItems;
             document.getElementById('itemName').value = '';
-            state.currentItems.push({ name: state.item, quantity: 1, grabbed: false });
+            newArr.push({ name: newItem, quantity: 1, grabbed: false });
+            state.numItems++;
         },
+
+        incrementQuantity: (state, action) => {
+            for(let i = 0; i < state.currentItems.length; i++) {
+                if(state.currentItems[i].name === action.payload) {
+                    state.currentItems[i].quantity += 1;
+                }
+            }
+        },
+
+        decrementQuantity: (state, action) => {
+            for(let i = 0; i < state.currentItems.length; i++) {
+                if(state.currentItems[i].name === action.payload) {
+                    if(state.currentItems[i].quantity === 1) {
+                        state.currentItems.splice(i, 1)
+                    } else {
+                        state.currentItems[i].quantity -= 1;
+                    }
+                }
+            }
+        }
     }
 })
 
-export const { addItem } = itemSlice.actions;
+export const { addItem, incrementQuantity, decrementQuantity } = itemSlice.actions;
 
 export default itemSlice.reducer;
