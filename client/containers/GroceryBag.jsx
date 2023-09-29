@@ -8,7 +8,6 @@ const GroceryBag = (props) => {
 
     const currItems = useSelector((state) => state.item.currentItems)
     const itemArr = [];
-    console.log(itemArr);
     for(let i = 0; i < currItems.length; i++) {
         itemArr.push(<Item key={currItems[i].name} name={currItems[i].name} quantity={currItems[i].quantity} grabbed={currItems[i].grabbed}/>)
     }

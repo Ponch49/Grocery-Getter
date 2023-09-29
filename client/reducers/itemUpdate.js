@@ -11,9 +11,7 @@ export const itemSlice = createSlice({
     initialState,
     reducers: {
         addItem: (state, action) => {
-            console.log(action)
             const newItem = action.payload;
-            // console.log(newItem)
             const newArr = state.currentItems;
             document.getElementById('itemName').value = '';
             newArr.push({ name: newItem, quantity: 1, grabbed: false });

@@ -4,10 +4,6 @@ import { useSelector } from "react-redux";
 
 
 
-// function addItem {
-//     let input = document.getElementById('input');
-    
-// };
 
 const App = (props) => {
 
