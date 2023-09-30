@@ -26,7 +26,7 @@ app.use('/dist', express.static(path.join(__dirname, '../dist')))
 
 //Go to signup right away
 app.get('/', (req, res) => {
-   return res.status(200).sendFile(path.resolve(__dirname, '../public/signup.html'))
+   return res.status(200).sendFile(path.resolve(__dirname, '../public/login.html'))
 })
 
 //sign up page
